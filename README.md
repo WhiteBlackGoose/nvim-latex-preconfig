@@ -1,3 +1,4 @@
+![Peek 2023-03-02 08-35](https://user-images.githubusercontent.com/31178401/222340202-f5d1e401-0664-4947-a120-d275b5462004.gif)
 # Neovim minimal LaTeX configuration
 
 ## Requirements
