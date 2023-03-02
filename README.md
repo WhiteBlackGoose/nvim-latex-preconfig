@@ -1,5 +1,6 @@
-![Peek 2023-03-02 08-35](https://user-images.githubusercontent.com/31178401/222340202-f5d1e401-0664-4947-a120-d275b5462004.gif)
 # Neovim minimal LaTeX configuration
+
+![Peek 2023-03-02 08-35](https://user-images.githubusercontent.com/31178401/222340202-f5d1e401-0664-4947-a120-d275b5462004.gif)
 
 ## Requirements
 
@@ -18,8 +19,16 @@
 
 ## Features
 
-- Automatically opens PDF viewer 
-- Syntax highlighting
-- LaTeX autocompletion with TeXLab (press Ctrl+Space)
-- Errors and warnings displayed
-- Folding of sections/blocks
+- 📝 Automatically opens PDF viewer 
+- 🖊️ Syntax highlighting
+- 🏎 LaTeX autocompletion with TeXLab (press Ctrl+Space)
+- ⚠️  Errors and warnings displayed
+- 📜 Folding of sections/blocks
+
+## How to use
+
+- Open your `.tex` document: `nvim doc.tex` or open neovim and type `:e doc.tex`
+- To trigger auto complete, press Ctrl+Space
+- To apply a suggestion, press Enter
+- To choose a suggestion, press Tab or Shift+Tab
+- To collapse or expand current block, press Space+j and Space+k
