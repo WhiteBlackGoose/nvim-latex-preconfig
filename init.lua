@@ -55,8 +55,7 @@ require'nvim-treesitter.configs'.setup {
 }
 
 
--- LSP
-require'lspconfig'.texlab.setup{}
+-- Live compilation
 vim.g.vimtex_compiler_latexmk = {
     build_dir = '.out',
     options = {
@@ -68,6 +67,9 @@ vim.g.vimtex_compiler_latexmk = {
     }
 }
 vim.g['vimtex_view_method'] = 'zathura'
+
+
+-- LSP
 local cmp = require('cmp')
 cmp.setup({
     snippet = {
@@ -86,7 +88,6 @@ cmp.setup({
         ['<S-Tab>'] = cmp.mapping.select_prev_item { behavior = cmp.SelectBehavior.Select },
     })
 })
-
 local lsp = require'lspconfig'
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 lsp.texlab.setup{capabilities = capabilities}
