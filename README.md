@@ -1,6 +1,6 @@
 # Neovim minimal LaTeX configuration
 
-![Peek 2023-03-02 08-35](https://user-images.githubusercontent.com/31178401/222340202-f5d1e401-0664-4947-a120-d275b5462004.gif)
+<img align=center src="https://user-images.githubusercontent.com/31178401/222340202-f5d1e401-0664-4947-a120-d275b5462004.gif" />
 
 ## Requirements
 
@@ -27,8 +27,14 @@
 
 ## How to use
 
+You need to learn the basic keybindings first (open `nvim` and type `:Tutor` and hit enter).
+
+To edit LaTeX:
+
 - Open your `.tex` document: `nvim doc.tex` or open neovim and type `:e doc.tex`
 - To trigger auto complete, press Ctrl+Space
 - To apply a suggestion, press Enter
 - To choose a suggestion, press Tab or Shift+Tab
 - To collapse or expand current block, press Space+j and Space+k
+
+I also encourage reading [VimTeX](https://www.ejmastnak.com/tutorials/vim-latex/vimtex/#doing-stuff) documentation for advancing in editing.

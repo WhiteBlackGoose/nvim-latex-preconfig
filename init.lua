@@ -17,12 +17,6 @@ require('lazy').setup ({
     -- Live recompilation
     'lervag/vimtex',
 
-    -- Syntax parser
-    'nvim-treesitter/nvim-treesitter',
-    'nvim-treesitter/nvim-treesitter-context',
-    'kevinhwang91/promise-async',
-    'kevinhwang91/nvim-ufo',
-
     -- Autocompletion and errors
     'https://github.com/hrsh7th/cmp-nvim-lsp',
     'L3MON4D3/LuaSnip',
@@ -48,11 +42,7 @@ vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
 vim.opt.smartindent = false
 vim.opt.number = true
-
--- Better syntax highlighting
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = { "latex" },
-}
+vim.opt.clipboard = 'unnamedplus'
 
 
 -- Live compilation
@@ -66,7 +56,7 @@ vim.g.vimtex_compiler_latexmk = {
         '-synctex=1'
     }
 }
-vim.g['vimtex_view_method'] = 'zathura'
+vim.g.vimtex_view_method = 'zathura'
 
 
 -- LSP
@@ -104,14 +94,6 @@ vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decr
 vim.o.foldlevelstart = 99
 vim.o.foldenable = true
 vim.o.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
-
-local bufnr = vim.api.nvim_get_current_buf()
-require('ufo').setup({
-    provider_selector = function(bufnr, filetype, buftype)
-        return {'treesitter'}
-    end,
-})
+vim.g.vimtex_fold_enabled = true
 vim.api.nvim_set_keymap('n', '<leader>j', 'zc', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>k', 'zo', { noremap = true, silent = true })
-vim.keymap.set('n', 'zR', require('ufo').openAllFolds)
-vim.keymap.set('n', 'zM', require('ufo').closeAllFolds)
