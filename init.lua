@@ -112,6 +112,6 @@ require('ufo').setup({
     end,
 })
 vim.api.nvim_set_keymap('n', '<leader>j', 'zc', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>k', 'zo:IndentBlanklineRefresh<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>k', 'zo', { noremap = true, silent = true })
 vim.keymap.set('n', 'zR', require('ufo').openAllFolds)
 vim.keymap.set('n', 'zM', require('ufo').closeAllFolds)
